@@ -1,10 +1,7 @@
-import { registerPlugin } from '@capacitor/core';
+import { registerPlugin } from "@capacitor/core";
+import type { SystemBarsPlugin } from "./definitions";
 
-import type { SystemBarsPlugin } from './definitions';
+const SystemBars = registerPlugin<SystemBarsPlugin>("SystemBars");
 
-const SystemBars = registerPlugin<SystemBarsPlugin>('SystemBars', {
-  web: () => import('./web').then((m) => new m.SystemBarsWeb()),
-});
-
-export * from './definitions';
+export * from "./definitions";
 export { SystemBars };

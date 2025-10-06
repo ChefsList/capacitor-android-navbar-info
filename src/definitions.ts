@@ -1,3 +1,7 @@
 export interface SystemBarsPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getNavigationBarInfo(): Promise<{
+    navigationBarHeight: number;
+    isNavigationBarVisible: boolean;
+    isGestureNavigation: boolean;
+  }>;
 }
