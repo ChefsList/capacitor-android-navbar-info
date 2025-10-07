@@ -23,10 +23,10 @@ npx cap sync
 ### getNavigationBarInfo()
 
 ```typescript
-getNavigationBarInfo() => Promise<{ navigationBarHeight: number; isNavigationBarVisible: boolean; isGestureNavigation: boolean; }>
+getNavigationBarInfo() => Promise<{ navigationBarHeight: number; navigationBarDeviceHeight: number; density: number; isNavigationBarVisible: boolean; isGestureNavigation: boolean; }>
 ```
 
-**Returns:** <code>Promise&lt;{ navigationBarHeight: number; isNavigationBarVisible: boolean; isGestureNavigation: boolean; }&gt;</code>
+**Returns:** <code>Promise&lt;{ navigationBarHeight: number; navigationBarDeviceHeight: number; density: number; isNavigationBarVisible: boolean; isGestureNavigation: boolean; }&gt;</code>
 
 --------------------
 
