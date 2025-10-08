@@ -47,7 +47,7 @@
     "@capacitor/core": ">=7.0.0"
   },
   "capacitor": {
-    "platforms": ["android"],
+    "platforms": ["android", "ios", "web"],
     "android": {
       "src": "android"
     }
