@@ -1,6 +1,6 @@
 export interface NavigationBarInfo {
-  navigationBarHeight: number;
-  navigationBarDeviceHeight: number;
+  heightInDp: number;
+  deviceHeight: number;
   density: number;
   isNavigationBarVisible: boolean;
   isGestureNavigation: boolean;

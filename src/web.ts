@@ -10,8 +10,8 @@ export class NavigationBarInfoWeb
     // Return default values for web/iOS platforms
     // Navigation bar is an Android-specific concept
     return {
-      navigationBarHeight: 0,
-      navigationBarDeviceHeight: 0,
+      heightInDp: 0,
+      deviceHeight: 0,
       density: 1,
       isNavigationBarVisible: false,
       isGestureNavigation: false,

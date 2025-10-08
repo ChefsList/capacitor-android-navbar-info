@@ -1,11 +1,11 @@
 # system-bars
 
-System bars dimentions on Android
+Capacitor plugin for Android providing information about the navigation bar, like navigation bar height, gesture navigation mode, and more
 
 ## Install
 
 ```bash
-npm install system-bars
+npm install @chefslist/capacitor-android-navigation-bar-info
 npx cap sync
 ```
 
@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`getNavigationBarInfo()`](#getnavigationbarinfo)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -23,11 +24,25 @@ npx cap sync
 ### getNavigationBarInfo()
 
 ```typescript
-getNavigationBarInfo() => Promise<{ navigationBarHeight: number; navigationBarDeviceHeight: number; density: number; isNavigationBarVisible: boolean; isGestureNavigation: boolean; }>
+getNavigationBarInfo() => Promise<NavigationBarInfo>
 ```
 
-**Returns:** <code>Promise&lt;{ navigationBarHeight: number; navigationBarDeviceHeight: number; density: number; isNavigationBarVisible: boolean; isGestureNavigation: boolean; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#navigationbarinfo">NavigationBarInfo</a>&gt;</code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### NavigationBarInfo
+
+| Prop                         | Type                 |
+| ---------------------------- | -------------------- |
+| **`heightInDp`**             | <code>number</code>  |
+| **`deviceHeight`**           | <code>number</code>  |
+| **`density`**                | <code>number</code>  |
+| **`isNavigationBarVisible`** | <code>boolean</code> |
+| **`isGestureNavigation`**    | <code>boolean</code> |
 
 </docgen-api>
