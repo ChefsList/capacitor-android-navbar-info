@@ -1,4 +1,4 @@
-package de.chefslist.plugins.systembars;
+package de.chefslist.plugins.navigationbarinfo;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
@@ -19,9 +19,9 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "SystemBars")
-public class SystemBarsPlugin extends Plugin {
-  private static final String TAG = "SystemBarsPlugin";
+@CapacitorPlugin(name = "NavigationBarInfo")
+public class NavigationBarInfoPlugin extends Plugin {
+  private static final String TAG = "NavigationBarInfoPlugin";
   private static final String ERROR_INVALID_CALL = "INVALID_CALL";
   private static final String ERROR_UNKNOWN = "UNKNOWN_ERROR";
   private static final int DEFAULT_NAV_BAR_HEIGHT = 20;
@@ -46,39 +46,21 @@ public class SystemBarsPlugin extends Plugin {
   public void getNavigationBarInfo(PluginCall call) {
     if (call == null) {
       Log.e(TAG, "PluginCall is null");
-      return; // Can't send error response without call object
+      return;
     }
 
     try {
-      // NavigationBarInfo mockInfo = getMockNavigationBarInfo();
-      NavigationBarInfo systemInfo = getSystemNavigationBarInfo();
-      JSObject result = createNavigationBarResult(systemInfo);
+      NavigationBarInfo systemNavigationBarInfo = getSystemNavigationBarInfo();
+      JSObject result = createNavigationBarInfoResult(systemNavigationBarInfo);
 
       if (result != null) {
         call.resolve(result);
       } else {
-        sendErrorResponse(call, "Failed to create navigation bar result", ERROR_UNKNOWN);
+        sendErrorResponse(call, "Failed to create navigation bar info result", ERROR_UNKNOWN);
       }
     } catch (Exception e) {
       Log.e(TAG, "Error getting navigation bar info", e);
       sendErrorResponse(call, "Error getting navigation bar info: " + e.getMessage(), ERROR_UNKNOWN);
-    }
-  }
-
-  private NavigationBarInfo getMockNavigationBarInfo() {
-    try {
-      // Return mock values with validation
-      return new NavigationBarInfo(
-          DEFAULT_NAV_BAR_HEIGHT, // Default height in dp
-          DEFAULT_NAV_BAR_HEIGHT, // Default height in dp
-          1,
-          true, // Navigation bar is visible by default
-          false // Gesture navigation is disabled by default
-      );
-    } catch (Exception e) {
-      Log.e(TAG, "Error creating mock navigation bar info", e);
-      // Return safe default values in case of error
-      return new NavigationBarInfo(DEFAULT_NAV_BAR_HEIGHT, DEFAULT_NAV_BAR_HEIGHT, 1, true, false);
     }
   }
 
@@ -143,19 +125,19 @@ public class SystemBarsPlugin extends Plugin {
         isGestureNavigation);
   }
 
-  private int pxToDp(int px) {
+  private int pxToDp(int devicePx) {
     Activity activity = getActivity();
 
-    if (px == 0) {
+    if (devicePx == 0) {
       return 0;
     }
 
     float density = activity.getResources().getDisplayMetrics().density;
 
-    return (int) Math.round(px / density);
+    return (int) Math.round(devicePx / density);
   }
 
-  private JSObject createNavigationBarResult(NavigationBarInfo info) {
+  private JSObject createNavigationBarInfoResult(NavigationBarInfo info) {
     if (info == null) {
       return null;
     }

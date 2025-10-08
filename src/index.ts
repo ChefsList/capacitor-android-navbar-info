@@ -1,7 +1,9 @@
 import { registerPlugin } from "@capacitor/core";
-import type { SystemBarsPlugin } from "./definitions";
 
-const SystemBars = registerPlugin<SystemBarsPlugin>("SystemBars");
+import type { NavigationBarInfoPlugin } from "./definitions";
+
+const NavigationBarInfo =
+  registerPlugin<NavigationBarInfoPlugin>("NavigationBarInfo");
 
 export * from "./definitions";
-export { SystemBars };
+export { NavigationBarInfo };

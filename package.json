@@ -1,7 +1,7 @@
 {
-  "name": "system-bars",
+  "name": "@chefslist/capacitor-android-navigation-bar-info",
   "version": "0.0.1",
-  "description": "System bars dimentions on Android",
+  "description": "The plugin provides the Android's navigation bar info",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -10,7 +10,7 @@
     "android/src/main/",
     "android/build.gradle",
     "dist/",
-    "SystemBars.podspec"
+    "NavigationBarInfo.podspec"
   ],
   "author": "Chefslist",
   "license": "Copyright by Chefslist",
@@ -29,7 +29,7 @@
   "scripts": {
     "verify": "npm run verify:android && npm run verify:web",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
-    "docgen": "docgen --api SystemBarsPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api NavigationBarInfoPlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",

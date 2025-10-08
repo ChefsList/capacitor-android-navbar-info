@@ -11,7 +11,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    namespace "de.chefslist.plugins.systembars"
+    namespace "de.chefslist.plugins.navigationbarinfo"
     compileSdk project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 34
     
     defaultConfig {

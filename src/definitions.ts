@@ -1,4 +1,4 @@
-export interface SystemBarsPlugin {
+export interface NavigationBarInfoPlugin {
   getNavigationBarInfo(): Promise<{
     navigationBarHeight: number;
     navigationBarDeviceHeight: number;
