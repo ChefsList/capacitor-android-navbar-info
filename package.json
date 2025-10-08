@@ -14,6 +14,9 @@
   ],
   "author": "Chefslist",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/chefslist/capacitor-android-navigation-bar-info.git"
