@@ -13,13 +13,13 @@
     "NavigationBarInfo.podspec"
   ],
   "author": "Chefslist",
-  "license": "Copyright by Chefslist",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/chefslist/chefslist-system-bars.git.git"
+    "url": "git+https://gitlab.com/chefslist/capacitor-android-navigation-bar-info.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/chefslist/chefslist-system-bars.git/issues"
+    "url": "https://gitlab.com/chefslist/capacitor-android-navigation-bar-info.git/issues"
   },
   "keywords": [
     "capacitor",
