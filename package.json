@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/chefslist/capacitor-android-navigation-bar-info.git"
+    "url": "git@github.com:ChefsList/capacitor-android-navbar-info.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/chefslist/capacitor-android-navigation-bar-info.git/issues"
+    "url": "https://github.com/ChefsList/capacitor-android-navbar-info/issues"
   },
   "keywords": [
     "capacitor",
