@@ -1,4 +1,4 @@
-# capacitor-android-navigation-bar-info
+# capacitor-android-navbar-info
 
 Capacitor plugin for Android providing information about the navigation bar, like navigation bar height, gesture navigation mode, and more
 
